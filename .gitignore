@@ -1,0 +1,9 @@
+backend/.env
+backend/__pycache__/
+backend/.venv/
+backend/uvicorn.log
+backend/uvicorn.err
+frontend/node_modules/
+frontend/dist/
+frontend/vite.log
+frontend/vite.err

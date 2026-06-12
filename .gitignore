@@ -1,9 +1,74 @@
+# Today in Busan local secrets and generated files
 backend/.env
-backend/__pycache__/
 backend/.venv/
+backend/__pycache__/
 backend/uvicorn.log
 backend/uvicorn.err
 frontend/node_modules/
 frontend/dist/
 frontend/vite.log
 frontend/vite.err
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[codz]
+*$py.class
+
+# Distribution / packaging
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Test / coverage reports
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+.pytest_cache/
+cover/
+
+# Environments and secrets
+.env
+.envrc
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# Tool caches
+.mypy_cache/
+.ruff_cache/
+.pyre/
+.pytype/
+.ipynb_checkpoints
+
+# Editors
+.idea/
+.vscode/
+tempCodeRunnerFile.py
+
+# Streamlit
+.streamlit/secrets.toml

@@ -4,10 +4,14 @@ backend/.venv/
 backend/__pycache__/
 backend/uvicorn.log
 backend/uvicorn.err
+backend/*.codex.log
+backend/*.codex.err
 frontend/node_modules/
 frontend/dist/
 frontend/vite.log
 frontend/vite.err
+frontend/*.codex.log
+frontend/*.codex.err
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

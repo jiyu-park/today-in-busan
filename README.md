@@ -1,5 +1,30 @@
 # Today in Busan
 
+## 바로 실행하는 법
+
+터미널을 2개 열고 각각 실행합니다.
+
+Backend:
+
+```powershell
+cd "C:\Users\playdata2\Desktop\today_in_busan_proj\backend"
+.\.venv\Scripts\activate
+uvicorn main:app --reload --port 8001
+```
+
+Frontend:
+
+```powershell
+cd "C:\Users\playdata2\Desktop\today_in_busan_proj\frontend"
+npm run dev -- --host 127.0.0.1 --port 5173
+```
+
+브라우저에서 접속:
+
+```txt
+http://127.0.0.1:5173
+```
+
 한국관광공사 TourAPI를 활용한 부산 관광 서비스 프론트엔드/백엔드 프로젝트입니다.
 
 현재 단계에서는 React 화면에서 직접 TourAPI 서비스키를 노출하지 않고, FastAPI 백엔드를 통해 관광지 목록, 상세 정보, 이미지, 행사 데이터를 받아오도록 구성했습니다.

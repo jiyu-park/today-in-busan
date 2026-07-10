@@ -69,15 +69,20 @@ function SpotDetail() {
     <section className="detail-page">
       <article className="detail-content">
         <Link className="back-link" to="/spots">
-          ← 목록으로 돌아가기
+          목록으로 돌아가기
         </Link>
 
-        {image && <img className="detail-image" src={image} alt={spot.title} />}
-        <p className="category">{spot.area}</p>
+        {image ? (
+          <img className="detail-image" src={image} alt={spot.title} />
+        ) : (
+          <div className="detail-image image-placeholder">Busan</div>
+        )}
+        <p className="category">{spot.area || 'Busan'}</p>
         <h1>{spot.title}</h1>
+        <p className="detail-summary">{spot.address || '주소 정보가 없습니다.'}</p>
 
         <section className="detail-section">
-          <h2>설명</h2>
+          <h2>장소 소개</h2>
           <p>{fullDescription}</p>
         </section>
 
@@ -95,17 +100,15 @@ function SpotDetail() {
         </dl>
 
         <section className="story-section">
-          <h2>역사 스토리</h2>
+          <h2>여행 메모</h2>
           <p>{fullDescription}</p>
         </section>
 
         <section className="source-section">
           <h2>검증 메모</h2>
           <p>
-            이 내용은 한국관광공사 TourAPI의 상세 소개 데이터에서 받은 원문을
-            표시한 것입니다. AI가 새로 지어낸 문장은 아니지만, 실제 역사적 사실
-            검증은 부산시, 문화재청, 공식 관광 안내 페이지 같은 1차 출처와 대조해
-            확인하는 것이 좋습니다.
+            이 내용은 한국관광공사 TourAPI의 관광지 데이터를 기준으로 표시됩니다. 방문 전
+            운영 시간, 휴무일, 예약 여부는 공식 안내 페이지에서 한 번 더 확인해 주세요.
           </p>
         </section>
       </article>

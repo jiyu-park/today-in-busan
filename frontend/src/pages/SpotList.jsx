@@ -22,10 +22,15 @@ function SpotList() {
   }, []);
 
   return (
-    <section className="page">
-      <div className="page-title">
-        <p className="eyebrow">Tour spots</p>
-        <h1>관광지 목록</h1>
+    <section className="page board-page">
+      <div className="page-title board-title">
+        <div>
+          <p className="eyebrow">Tour spots</p>
+          <h1>부산 관광지 보드</h1>
+        </div>
+        <Link className="ghost-button" to="/">
+          플래너로 돌아가기
+        </Link>
       </div>
 
       {isLoading && <p className="status-text">관광지를 불러오는 중입니다.</p>}
@@ -35,11 +40,15 @@ function SpotList() {
         <div className="card-grid">
           {spots.map((spot) => (
             <Link className="spot-card" key={spot.id} to={`/spots/${spot.id}`}>
-              {spot.image && <img src={spot.image} alt={spot.title} />}
+              {spot.image ? (
+                <img src={spot.image} alt={spot.title} />
+              ) : (
+                <div className="image-placeholder">Busan</div>
+              )}
               <div>
-                <p className="category">{spot.area}</p>
+                <p className="category">{spot.area || 'Busan'}</p>
                 <h2>{spot.title}</h2>
-                <p>{spot.shortDescription || spot.address}</p>
+                <p>{spot.shortDescription || spot.address || '상세 정보를 확인해 보세요.'}</p>
               </div>
             </Link>
           ))}

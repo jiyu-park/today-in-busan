@@ -1,4 +1,4 @@
-const API_BASE_URL = 'http://127.0.0.1:8001/api';
+const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || 'http://127.0.0.1:8001/api';
 
 async function request(path) {
   const response = await fetch(`${API_BASE_URL}${path}`);
@@ -25,4 +25,8 @@ export function fetchSpotImages(contentId) {
 
 export function fetchEvents() {
   return request('/events');
+}
+
+export function fetchEventDetail(eventId) {
+  return request(`/events/${eventId}`);
 }

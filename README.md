@@ -8,15 +8,14 @@ Backend:
 
 ```powershell
 cd "C:\Users\playdata2\Desktop\today_in_busan_proj\backend"
-.\.venv\Scripts\activate
-uvicorn main:app --reload --port 8001
+.\.venv\Scripts\python.exe -m uvicorn main:app --reload --host 127.0.0.1 --port 8001
 ```
 
 Frontend:
 
 ```powershell
 cd "C:\Users\playdata2\Desktop\today_in_busan_proj\frontend"
-npm run dev -- --host 127.0.0.1 --port 5173
+npm.cmd run dev -- --host 127.0.0.1 --port 5173
 ```
 
 브라우저에서 접속:
@@ -102,7 +101,7 @@ TOUR_API_KEY=your_real_service_key_here
 서버 실행:
 
 ```powershell
-uvicorn main:app --reload --port 8001
+.\.venv\Scripts\python.exe -m uvicorn main:app --reload --host 127.0.0.1 --port 8001
 ```
 
 확인:
@@ -117,7 +116,7 @@ http://127.0.0.1:8001/api/spots
 ```powershell
 cd "C:\Users\playdata2\Desktop\today_in_busan_proj\frontend"
 npm install
-npm run dev
+npm.cmd run dev -- --host 127.0.0.1 --port 5173
 ```
 
 확인:
